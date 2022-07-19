@@ -17,21 +17,28 @@ export default function AvailableNFBS() {
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
 
-  useEffect(async () => {
-    async function fetchItems() {
-      const response = await fetch(`http://3.138.238.97:8080/availableNFB`);
-      const data = await response.json();
-      setItems(data);
-    }
+  const initialize = async () => {
     await fetchItems();
-  });
+    await generateOffset();
+  };
+
+  const fetchItems = async () => {
+    const response = await fetch(`http://3.138.238.97:8080/availableNFB`);
+    const data = await response.json();
+    setItems(data);
+    console.log(items);
+  };
 
   useEffect(() => {
+    initialize();
+  }, [items.length]);
+
+  const generateOffset = () => {
     const endOffset = itemOffset + itemsPerPage;
     setCurrentItems(items.slice(itemOffset, endOffset));
     console.log(currentItems);
     setPageCount(Math.ceil(items.length / itemsPerPage));
-  }, [itemOffset, itemsPerPage]);
+  };
 
   const handlePageClick = (e) => {
     const newOffset = (e.selected * itemsPerPage) % items.length;
