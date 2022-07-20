@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import Drawers from "./Drawers";
 
-export default function Navbar() {
+export default function Navbar(props) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
 
@@ -53,7 +53,9 @@ export default function Navbar() {
           <Menu autoSelect={false}>
             <MenuButton>
               <div className="flex ">
-                <p className='hover:text-teal-400 cursor-pointer bg-[#1d172e]'>WHITEPAPER</p>
+                <p className="hover:text-teal-400 cursor-pointer bg-[#1d172e]">
+                  WHITEPAPER
+                </p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -66,89 +68,166 @@ export default function Navbar() {
               </div>
             </MenuButton>
 
-            <MenuList bg='#1d172e' border='#29213b'  rounded='5px'>
-
-              <p className='font-semibold text-white py-1 w-[100px]'><MenuItem _hover={{ textColor: '#99F6FF' }} pl='20px'>Deck</MenuItem></p>
-
+            <MenuList bg="#1d172e" border="#29213b" rounded="5px">
+              <p className="font-semibold text-white py-1 w-[100px]">
+                <MenuItem _hover={{ textColor: "#99F6FF" }} pl="20px">
+                  Deck
+                </MenuItem>
+              </p>
             </MenuList>
           </Menu>
           <Menu autoSelect={false}>
             <MenuButton>
-              <div className='flex  '>
-                <p className='hover:text-teal-400 cursor-pointer '>COMMUNITY</p>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z" /><path d="M12 14l-4-4h8z" fill="rgba(255,255,255,1)" /></svg>
+              <div className="flex  ">
+                <p className="hover:text-teal-400 cursor-pointer ">COMMUNITY</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path d="M12 14l-4-4h8z" fill="rgba(255,255,255,1)" />
+                </svg>
               </div>
             </MenuButton>
 
-            <MenuList bg='#1d172e' border='#29213b' rounded='5px'  >
-              <p className='font-semibold text-white py-1 w-[160px]'> <MenuItem h='30px' pl='20px' _hover={{ textColor: '#99F6FF' }} >TWITTER</MenuItem></p>
-              <p className='font-semibold text-white py-1 w-[160px]'> <MenuItem h='30px' pl='20px' _hover={{ textColor: '#99F6FF' }}>INSTAGRAM</MenuItem></p>
-              <p className='font-semibold text-white py-1 w-[160px]'> <MenuItem h='30px' pl='20px' _hover={{ textColor: '#99F6FF' }}>YOUTUBE</MenuItem></p>
-              <p className='font-semibold text-white py-1 w-[160px]'> <MenuItem h='30px' pl='20px' _hover={{ textColor: '#99F6FF' }}>MEDIUM</MenuItem></p>
+            <MenuList bg="#1d172e" border="#29213b" rounded="5px">
+              <p className="font-semibold text-white py-1 w-[160px]">
+                {" "}
+                <MenuItem h="30px" pl="20px" _hover={{ textColor: "#99F6FF" }}>
+                  TWITTER
+                </MenuItem>
+              </p>
+              <p className="font-semibold text-white py-1 w-[160px]">
+                {" "}
+                <MenuItem h="30px" pl="20px" _hover={{ textColor: "#99F6FF" }}>
+                  INSTAGRAM
+                </MenuItem>
+              </p>
+              <p className="font-semibold text-white py-1 w-[160px]">
+                {" "}
+                <MenuItem h="30px" pl="20px" _hover={{ textColor: "#99F6FF" }}>
+                  YOUTUBE
+                </MenuItem>
+              </p>
+              <p className="font-semibold text-white py-1 w-[160px]">
+                {" "}
+                <MenuItem h="30px" pl="20px" _hover={{ textColor: "#99F6FF" }}>
+                  MEDIUM
+                </MenuItem>
+              </p>
             </MenuList>
           </Menu>
-          <Menu autoSelect={false} >
+          <Menu autoSelect={false}>
             <MenuButton>
-              <div className='flex '>
-                <p className='hover:text-teal-400 cursor-pointer '>MORE</p>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z" /><path d="M12 14l-4-4h8z" fill="rgba(255,255,255,1)" /></svg>
+              <div className="flex ">
+                <p className="hover:text-teal-400 cursor-pointer ">MORE</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path d="M12 14l-4-4h8z" fill="rgba(255,255,255,1)" />
+                </svg>
               </div>
             </MenuButton>
-            <MenuList bg='#99F6FF' border='#29213b' rounded='5px' >
-
-              <MenuItem _hover={{textColor: '#99F6FF' }} pl='20px' bg='#1d172e'>
-                <div className='flex flex-col  text-white hover:text-[#99F6FF] w-[220px]  pt-1'>
-                  <p className='font-bold hover:text-[#99F6FF] w-full'>SIGN UP</p>
-                  <p className='text-sm  hover:text-[#99F6FF]'>Subscribe for updates</p>
+            <MenuList bg="#99F6FF" border="#29213b" rounded="5px">
+              <MenuItem
+                _hover={{ textColor: "#99F6FF" }}
+                pl="20px"
+                bg="#1d172e"
+              >
+                <div className="flex flex-col  text-white hover:text-[#99F6FF] w-[220px]  pt-1">
+                  <p className="font-bold hover:text-[#99F6FF] w-full">
+                    SIGN UP
+                  </p>
+                  <p className="text-sm  hover:text-[#99F6FF]">
+                    Subscribe for updates
+                  </p>
                 </div>
               </MenuItem>
 
-              <MenuItem _hover={{ textColor: '#99F6FF' }} pl='20px'bg='#1d172e'>
-                <div className='flex flex-col  text-white hover:text-[#99F6FF] w-[220px] pt-1'>
-                  <p className='font-bold hover:text-[#99F6FF]'>TEAM</p>
-                  <p className='text-sm hover:text-[#99F6FF]'>This is who we are</p>
+              <MenuItem
+                _hover={{ textColor: "#99F6FF" }}
+                pl="20px"
+                bg="#1d172e"
+              >
+                <div className="flex flex-col  text-white hover:text-[#99F6FF] w-[220px] pt-1">
+                  <p className="font-bold hover:text-[#99F6FF]">TEAM</p>
+                  <p className="text-sm hover:text-[#99F6FF]">
+                    This is who we are
+                  </p>
                 </div>
               </MenuItem>
-              <MenuItem _hover={{ textColor: '#99F6FF'}} pl='20px'bg='#1d172e'>
-                <div className='flex flex-col  text-white hover:text-[#99F6FF] w-[220px] pt-1'>
-                  <p className='font-bold hover:text-[#99F6FF]'>CONTRACT</p>
-                  <p className='text-sm hover:text-[#99F6FF]'>Code is low</p>
+              <MenuItem
+                _hover={{ textColor: "#99F6FF" }}
+                pl="20px"
+                bg="#1d172e"
+              >
+                <div className="flex flex-col  text-white hover:text-[#99F6FF] w-[220px] pt-1">
+                  <p className="font-bold hover:text-[#99F6FF]">CONTRACT</p>
+                  <p className="text-sm hover:text-[#99F6FF]">Code is low</p>
                 </div>
               </MenuItem>
-              <MenuItem _hover={{ textColor: '#99F6FF'}} pl='20px'bg='#1d172e'>
-                <div className='flex flex-col  text-white hover:text-[#99F6FF] w-[220px] pt-1'>
-                  <p className='font-bold hover:text-[#99F6FF]'>AUDIT</p>
-                  <p className='text-sm hover:text-[#99F6FF]'>Verified for safety</p>
+              <MenuItem
+                _hover={{ textColor: "#99F6FF" }}
+                pl="20px"
+                bg="#1d172e"
+              >
+                <div className="flex flex-col  text-white hover:text-[#99F6FF] w-[220px] pt-1">
+                  <p className="font-bold hover:text-[#99F6FF]">AUDIT</p>
+                  <p className="text-sm hover:text-[#99F6FF]">
+                    Verified for safety
+                  </p>
                 </div>
               </MenuItem>
-              <MenuItem _hover={{ textColor: '#99F6FF'}} pl='20px'bg='#1d172e'>
-                <div className='flex flex-col  text-white hover:text-[#99F6FF] w-[220px] pt-1'>
-                  <p className='font-bold hover:text-[#99F6FF]'>FAQ</p>
-                  <p className='text-sm hover:text-[#99F6FF]'>Questions</p>
+              <MenuItem
+                _hover={{ textColor: "#99F6FF" }}
+                pl="20px"
+                bg="#1d172e"
+              >
+                <div className="flex flex-col  text-white hover:text-[#99F6FF] w-[220px] pt-1">
+                  <p className="font-bold hover:text-[#99F6FF]">FAQ</p>
+                  <p className="text-sm hover:text-[#99F6FF]">Questions</p>
                 </div>
               </MenuItem>
-              <MenuItem _hover={{ textColor: '#99F6FF'}} pl='20px'bg='#1d172e'>
-                <div className='flex flex-col  text-white hover:text-[#99F6FF] w-[220px] pt-1'>
-                  <p className='font-bold hover:text-[#99F6FF]'>SPONSORSHIP</p>
-                  <p className='text-sm hover:text-[#99F6FF]'>Be a Sponsor</p>
+              <MenuItem
+                _hover={{ textColor: "#99F6FF" }}
+                pl="20px"
+                bg="#1d172e"
+              >
+                <div className="flex flex-col  text-white hover:text-[#99F6FF] w-[220px] pt-1">
+                  <p className="font-bold hover:text-[#99F6FF]">SPONSORSHIP</p>
+                  <p className="text-sm hover:text-[#99F6FF]">Be a Sponsor</p>
                 </div>
               </MenuItem>
-
             </MenuList>
           </Menu>
         </div>
 
         {/* Third */}
-        <div className=' flex items-center space-x-2'>
-          <Link to='/buy'>  <button className=' px-4 py-2 rounded-lg hover:bg-teal-500 bg-teal-200 text-blue-900'>BUY</button></Link>
-          <button className=' px-4 py-2 rounded-lg hover:bg-teal-500 bg-teal-200 text-blue-900'>CONNECT</button>
+        <div className=" flex items-center space-x-2">
+          <Link to="/buy">
+            {" "}
+            <button className=" px-4 py-2 rounded-lg hover:bg-teal-500 bg-teal-200 text-blue-900">
+              BUY
+            </button>
+          </Link>
+          <button
+            className=" px-4 py-2 rounded-lg hover:bg-teal-500 bg-teal-200 text-blue-900"
+            onClick={props.connectMetamask}
+          >
+            {props.account ? props.account : "CONNECT"}
+          </button>
           {/* HamMenu */}
-          <div className=' hidden lg:block'>
+          <div className=" hidden lg:block">
             <Drawers />
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
-
