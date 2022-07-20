@@ -1,7 +1,7 @@
 import React from "react";
 import LightCert from "../static/images/NFB Certificate (3).png";
 import DarkCert from "../static/images/Cartificate-Dark.png";
-
+import {Link} from 'react-router-dom'
 const ForSellSlide = () => {
   const handleClick1 = () => {};
   const handleClick2 = () => {};
@@ -79,7 +79,7 @@ const ForSellSlide = () => {
         </div>
         <div className="seeMore">
           {" "}
-          <a href="sale.html">SEE ALL</a>{" "}
+          <Link to="/buy">SEE ALL</Link>{" "}
         </div>
       </div>
     </section>
