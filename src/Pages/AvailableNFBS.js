@@ -7,10 +7,6 @@ import { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
 
 export default function AvailableNFBS() {
-  {
-    /* Import your own fetched data for the items */
-  }
-
   const [items, setitems] = useState([]);
   const itemsPerPage = 8;
   const [currentItems, setCurrentItems] = useState([]);
@@ -32,6 +28,13 @@ export default function AvailableNFBS() {
     setCurrentItems(items.slice(itemOffset, endOffset));
     setPageCount(Math.ceil(items.length / itemsPerPage));
   }, [itemOffset, itemsPerPage, items.length]);
+
+  const formatTime = (isoString) => {
+    var b = isoString.split(/\D+/);
+    return new Date(
+      Date.UTC(b[0], --b[1], b[2], b[3], b[4], b[5], b[6])
+    ).toString();
+  };
 
   const handlePageClick = (e) => {
     const newOffset = (e.selected * itemsPerPage) % items.length;
@@ -56,16 +59,13 @@ export default function AvailableNFBS() {
       <div className="text-white grid grid-cols-4 lg:grid-cols-2 justify-center xl:grid-cols-3 sm:grid-cols-1">
         {items.length != 0 &&
           currentItems.map((e, i) => {
-            {
-              /* Send data according to the structure of data in the given variables */
-            }
             return (
               <div key={i}>
                 <Card
                   img={e.image == "Dark" ? Dark : Light}
                   price={e.price}
                   bond={e.bondId}
-                  time={e.timestamp}
+                  time={formatTime(e.timestamp)}
                   button="BUY"
                 />
               </div>

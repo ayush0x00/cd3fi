@@ -1,5 +1,4 @@
 import React from "react";
-import certificate from "../../Media/Cartificate-Dark.png";
 import ModalEl from "./ModalEl";
 import ModalElSold from "./ModalElSold";
 

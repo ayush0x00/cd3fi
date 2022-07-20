@@ -4,7 +4,6 @@ import CounterArea from "../components/CounterArea";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../static/css/style.css";
 import "../static/css/responsive.css";
-import Banner from "../components/Banner";
 import ForSellSlide from "../components/ForSellSlide";
 import EarnCash from "../components/EarnCash";
 import TextColumn from "../components/TextColumn";
@@ -15,26 +14,22 @@ import RichColumn from "../components/RichColumn";
 import EnjoyColumn from "../components/EnjoyColumn";
 import InvestorColumn from "../components/InvestorColumn";
 import BondDynamics from "../components/BondDynamics";
-import Example from "../components/Example";
-import SampleSlide from "../components/SampleSlide";
-import { Routes,Route } from 'react-router-dom';
-import SalesPage from  '../Pages/SalesPage.js'
 import BannerW from "../components/BannerW";
 
-import React from 'react'
+import React from "react";
 import SplideCrousel from "../components/SplideCrousel";
 
 export default function MainPage() {
   return (
     <div>
-       <BannerW />
-       
+      <BannerW />
+
       <CounterArea />
       <SplideCrousel />
       <ForSellSlide />
       <EarnCash />
       <TextColumn />
-      
+
       <NFBColumn />
       <StabilityColumn />
       <ConnectSection />
@@ -42,7 +37,7 @@ export default function MainPage() {
       <EnjoyColumn />
       <InvestorColumn />
       <BondDynamics />
-      <Footer /> 
+      <Footer />
     </div>
-  )
+  );
 }
