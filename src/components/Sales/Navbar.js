@@ -40,10 +40,10 @@ export default function Navbar() {
         {/* second */}
         <div className='flex items-center space-x-20 justify-between 2xl:space-x-16 xl:space-x-7 lg:hidden '>
           <div className='flex '>
-            <p className='hover:text-teal-400 cursor-pointer'>CD3FI</p>
+            <a href='https://cd3fi.com/' target='_blank'> <p className='hover:text-teal-400 cursor-pointer'>CD3FI</p></a>
           </div>
           <div className='flex '>
-            <p className='hover:text-teal-400 cursor-pointer'>CD3D</p>
+            <a href='https://cd3d.app/' target='_blank'><p className='hover:text-teal-400 cursor-pointer'>CD3D</p></a>
           </div>
           <div className='flex ]'>
             <p className='hover:text-teal-400 cursor-pointer'>EXCHANGE</p>
@@ -102,7 +102,7 @@ export default function Navbar() {
               <MenuItem _hover={{ bg: '#29213b', textColor: '#fcfcfc' }} pl='20px'>
                 <div className='flex flex-col  text-blue-900 hover:text-white w-[220px] pt-1'>
                   <p className='font-bold'>CONTRACT</p>
-                  <p className='text-sm'>Code is low</p>
+                  <p className='text-sm'>Code is law</p>
                 </div>
               </MenuItem>
               <MenuItem _hover={{ bg: '#29213b', textColor: '#fcfcfc' }} pl='20px'>
