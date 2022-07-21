@@ -11,7 +11,7 @@ export default function Card(props) {
           <p className="text-teal-200 text-xl font-bold lg:text-base sm:text-sm">
             {props.price}
           </p>
-          <p className="font-bold text-sm lg:text-xs">{`Band ${props.bond}`}</p>
+          <p className="font-bold text-sm lg:text-xs">{`Bond ${props.bond}`}</p>
         </div>
         <div className="flex items-center justify-between py-4 pb-8">
           <p className="text-xs ">{props.time}</p>
