@@ -22,6 +22,7 @@ export default function ModalElSold(props) {
         fontSize="13px"
         color="#1e0347"
         height="24px"
+        width = "200px"
       >
         {props.name}
       </Button>
