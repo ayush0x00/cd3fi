@@ -37,6 +37,7 @@ export default function ModalElSold(props) {
           height="500px"
           px="20px"
           pt="30px"
+          mt="200px"
         >
           <ModalHeader>Resell NFB</ModalHeader>
 
