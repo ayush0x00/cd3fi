@@ -37,6 +37,7 @@ export default function ModalEl(props) {
           px="20px"
           pt="30px"
           zIndex={10}
+          mt="200px"
         >
           <ModalHeader>
             <p className="text-lg">Buy NFB</p>
