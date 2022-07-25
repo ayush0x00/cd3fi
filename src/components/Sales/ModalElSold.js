@@ -28,7 +28,7 @@ export default function ModalElSold(props) {
       </Button>
 
       <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
+        <ModalOverlay bg="rgba(0,0,0,0.45)" />
         <ModalContent
           bg="#d4fcf2"
           w="450px"
