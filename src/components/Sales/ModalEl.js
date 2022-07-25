@@ -27,7 +27,7 @@ export default function ModalEl(props) {
       </Button>
 
       <Modal isOpen={isOpen} onClose={onClose} size="md">
-        <ModalOverlay />
+        <ModalOverlay bg="rgba(0,0,0,0.45)" />
         <ModalContent
           bg="#d4fcf2"
           w="350px"
