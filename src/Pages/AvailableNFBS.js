@@ -52,7 +52,7 @@ export default function AvailableNFBS() {
           className="text-white flex justify-center space-x-2 items-center sm:space-x-[3px] "
           previousLinkClassName="bg-teal-200 text-blue-900 py-1 px-2 rounded-lg sm:text-sm font-bold hover:bg-teal-300"
           nextLinkClassName="bg-teal-200 text-blue-900 px-2 py-1 rounded-lg sm:text-sm font-bold hover:bg-teal-300"
-          pageLinkClassName="bg-white text-blue-800 px-2 py-1 rounded sm:px-1 sm:text-sm sm:hidden hover:bg-gray-600 hover:text-white"
+          pageLinkClassName="bg-white text-blue-500 px-2 py-1 rounded sm:px-1 sm:text-sm sm:hidden hover:bg-gray-600 hover:text-black"
           renderOnZeroPageCount={null}
         />
       </div>
