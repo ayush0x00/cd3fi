@@ -17,7 +17,7 @@ export default function ModalEl(props) {
       <Button
         variant={"ghost"}
         _hover={{ bg: "#81cdd4" }}
-        className="text-sm bg-teal-200 text-blue-900 w-16 rounded-xl  font-bold"
+        className="text-sm bg-cyan-200 text-black w-16 rounded-xl  font-bold"
         onClick={onOpen}
         fontSize="13px"
         color="#1e0347"
