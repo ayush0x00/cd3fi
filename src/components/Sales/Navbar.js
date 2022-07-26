@@ -35,7 +35,7 @@ export default function Navbar(props) {
               style={{ color: "#FFFFFF", "text-decoration": "none" }}
             >
               {" "}
-              <p className="hover:text-teal-400 cursor-pointer">CD3FI</p>
+              <p className="hover:text-cyan-200 cursor-pointer">CD3FI</p>
             </a>
           </div>
           <div className="flex ">
@@ -44,16 +44,16 @@ export default function Navbar(props) {
               target="_blank"
               style={{ color: "#FFFFFF", "text-decoration": "none" }}
             >
-              <p className="hover:text-teal-400 cursor-pointer">CD3D</p>
+              <p className="hover:text-cyan-200 cursor-pointer">CD3D</p>
             </a>
           </div>
           <div className="flex ]">
-            <p className="hover:text-teal-400 cursor-pointer">EXCHANGE</p>
+            <p className="hover:text-cyan-200 cursor-pointer">EXCHANGE</p>
           </div>
           <Menu autoSelect={false}>
             <MenuButton>
               <div className="flex ">
-                <p className="hover:text-teal-400 cursor-pointer bg-[#1d172e]">
+                <p className="hover:text-cyan-200 cursor-pointer bg-[#1d172e]">
                   WHITEPAPER
                 </p>
                 <svg
@@ -79,7 +79,7 @@ export default function Navbar(props) {
           <Menu autoSelect={false}>
             <MenuButton>
               <div className="flex  ">
-                <p className="hover:text-teal-400 cursor-pointer ">COMMUNITY</p>
+                <p className="hover:text-cyan-200 cursor-pointer ">COMMUNITY</p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -122,7 +122,7 @@ export default function Navbar(props) {
           <Menu autoSelect={false}>
             <MenuButton>
               <div className="flex ">
-                <p className="hover:text-teal-400 cursor-pointer ">MORE</p>
+                <p className="hover:text-cyan-200 cursor-pointer ">MORE</p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -212,12 +212,12 @@ export default function Navbar(props) {
         <div className=" flex items-center space-x-2">
           <Link to="/buy">
             {" "}
-            <button className=" px-4 py-2 rounded-lg hover:bg-teal-500 bg-teal-200 text-blue-900">
+            <button className=" px-4 py-2 rounded-lg hover:bg-cyan-400 bg-cyan-200 text-black">
               BUY
             </button>
           </Link>
           <button
-            className=" px-4 py-2 rounded-lg hover:bg-teal-500 bg-teal-200 text-blue-900"
+            className=" px-4 py-2 rounded-lg hover:bg-cyan-400 bg-cyan-200 text-black"
             onClick={props.connectMetamask}
           >
             {props.account ? props.account : "CONNECT"}
