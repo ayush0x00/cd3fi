@@ -93,25 +93,25 @@ export default function Navbar(props) {
             </MenuButton>
 
             <MenuList bg="#1d172e" border="#29213b" rounded="5px">
-              <p className="font-semibold text-white py-1 w-[160px]">
+              <p className="font-semibold text-white py-1 w-[160px] hover:border-b-2 hover:border-cyan-400 ">
                 {" "}
-                <MenuItem h="30px" pl="20px" _hover={{ textColor: "#99F6FF" }}>
+                <MenuItem h="30px" pl="20px" pr="20px" _hover={{ textColor: "#99F6FF" }}>
                   TWITTER
                 </MenuItem>
               </p>
-              <p className="font-semibold text-white py-1 w-[160px]">
+              <p className="font-semibold text-white py-1 w-[160px] hover:border-b-2 hover:border-cyan-400 ">
                 {" "}
                 <MenuItem h="30px" pl="20px" _hover={{ textColor: "#99F6FF" }}>
                   INSTAGRAM
                 </MenuItem>
               </p>
-              <p className="font-semibold text-white py-1 w-[160px]">
+              <p className="font-semibold text-white py-1 w-[160px] hover:border-b-2 hover:border-cyan-400 ">
                 {" "}
                 <MenuItem h="30px" pl="20px" _hover={{ textColor: "#99F6FF" }}>
                   YOUTUBE
                 </MenuItem>
               </p>
-              <p className="font-semibold text-white py-1 w-[160px]">
+              <p className="font-semibold text-white py-1 w-[160px] hover:border-b-2 hover:border-cyan-400 ">
                 {" "}
                 <MenuItem h="30px" pl="20px" _hover={{ textColor: "#99F6FF" }}>
                   MEDIUM
@@ -138,26 +138,27 @@ export default function Navbar(props) {
               <MenuItem
                 _hover={{ textColor: "#99F6FF" }}
                 pl="20px"
+                pr="20px"
                 bg="#1d172e"
               >
-                <div className="flex flex-col  text-white hover:text-[#99F6FF] w-[220px]  pt-1">
+                <div className="flex flex-col  text-white hover:text-[#99F6FF] w-[220px]  pt-1 hover:border-b-2 hover:border-cyan-400 rounded">
                   <p className="font-bold hover:text-[#99F6FF] w-full">
                     SIGN UP
                   </p>
-                  <p className="text-sm  hover:text-[#99F6FF]">
+                  <p className="text-sm">
                     Subscribe for updates
                   </p>
                 </div>
               </MenuItem>
-
+              
               <MenuItem
                 _hover={{ textColor: "#99F6FF" }}
                 pl="20px"
                 bg="#1d172e"
               >
-                <div className="flex flex-col  text-white hover:text-[#99F6FF] w-[220px] pt-1">
+                <div className="flex flex-col  text-white hover:text-[#99F6FF] w-[220px] pt-1 hover:border-b-2 hover:border-cyan-400 rounded">
                   <p className="font-bold hover:text-[#99F6FF]">TEAM</p>
-                  <p className="text-sm hover:text-[#99F6FF]">
+                  <p className="text-sm">
                     This is who we are
                   </p>
                 </div>
@@ -167,9 +168,9 @@ export default function Navbar(props) {
                 pl="20px"
                 bg="#1d172e"
               >
-                <div className="flex flex-col  text-white hover:text-[#99F6FF] w-[220px] pt-1">
+                <div className="flex flex-col  text-white hover:text-[#99F6FF] w-[220px] pt-1 hover:border-b-2 hover:border-cyan-400 rounded">
                   <p className="font-bold hover:text-[#99F6FF]">CONTRACT</p>
-                  <p className="text-sm hover:text-[#99F6FF]">Code is low</p>
+                  <p className="text-sm">Code is low</p>
                 </div>
               </MenuItem>
               <MenuItem
@@ -177,9 +178,9 @@ export default function Navbar(props) {
                 pl="20px"
                 bg="#1d172e"
               >
-                <div className="flex flex-col  text-white hover:text-[#99F6FF] w-[220px] pt-1">
+                <div className="flex flex-col  text-white hover:text-[#99F6FF] w-[220px] pt-1 hover:border-b-2 hover:border-cyan-400 rounded">
                   <p className="font-bold hover:text-[#99F6FF]">AUDIT</p>
-                  <p className="text-sm hover:text-[#99F6FF]">
+                  <p className="text-sm">
                     Verified for safety
                   </p>
                 </div>
@@ -189,9 +190,9 @@ export default function Navbar(props) {
                 pl="20px"
                 bg="#1d172e"
               >
-                <div className="flex flex-col  text-white hover:text-[#99F6FF] w-[220px] pt-1">
+                <div className="flex flex-col  text-white hover:text-[#99F6FF] w-[220px] pt-1 hover:border-b-2 hover:border-cyan-400 rounded">
                   <p className="font-bold hover:text-[#99F6FF]">FAQ</p>
-                  <p className="text-sm hover:text-[#99F6FF]">Questions</p>
+                  <p className="text-sm">Questions</p>
                 </div>
               </MenuItem>
               <MenuItem
@@ -199,9 +200,9 @@ export default function Navbar(props) {
                 pl="20px"
                 bg="#1d172e"
               >
-                <div className="flex flex-col  text-white hover:text-[#99F6FF] w-[220px] pt-1">
+                <div className="flex flex-col  text-white hover:text-[#99F6FF] w-[220px] pt-1 hover:border-b-2 hover:border-cyan-400 rounded">
                   <p className="font-bold hover:text-[#99F6FF]">SPONSORSHIP</p>
-                  <p className="text-sm hover:text-[#99F6FF]">Be a Sponsor</p>
+                  <p className="text-sm">Be a Sponsor</p>
                 </div>
               </MenuItem>
             </MenuList>
