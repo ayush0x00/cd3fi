@@ -63,10 +63,10 @@ export default function ModalEl(props) {
 
           <ModalFooter>
             <div className="flex justify-between w-full pt-6 pb-3">
-              <Button colorScheme="teal" mr={3}>
+              <Button bg="lightblue" width="100px" rounded="10px" fontWeight="semibold">
                 Buy
               </Button>
-              <Button variant="ghost" onClick={onClose} colorScheme="teal">
+              <Button variant="ghost" onClick={onClose} width="100px" rounded="10px" fontWeight="semibold" bg="lightblue">
                 Cancel
               </Button>
             </div>
