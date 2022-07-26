@@ -25,7 +25,6 @@ export default function MainPage() {
       <BannerW />
 
       <CounterArea />
-      <SplideCrousel />
       <ForSellSlide />
       <EarnCash />
       <TextColumn />
