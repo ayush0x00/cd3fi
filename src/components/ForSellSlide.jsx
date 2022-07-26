@@ -2,6 +2,7 @@ import React from "react";
 import LightCert from "../static/images/NFB Certificate (3).png";
 import DarkCert from "../static/images/Cartificate-Dark.png";
 import {Link} from 'react-router-dom'
+import SplideCrousel from "./SplideCrousel";
 const ForSellSlide = () => {
   const handleClick1 = () => {};
   const handleClick2 = () => {};
@@ -11,7 +12,7 @@ const ForSellSlide = () => {
         <div className="feeHeading">
           <h4> FOR SALE</h4>
         </div>
-        <SplideCrousel/>
+        <SplideCrousel />
         <div className="sellSlide owl-carousel">
           <div className="slideContant">
             <figure>
