@@ -7,10 +7,11 @@ const ForSellSlide = () => {
   const handleClick2 = () => {};
   return (
     <section className="forSellSlide">
-      <div className="container">
+      <div className="">
         <div className="feeHeading">
           <h4> FOR SALE</h4>
         </div>
+        <SplideCrousel/>
         <div className="sellSlide owl-carousel">
           <div className="slideContant">
             <figure>
