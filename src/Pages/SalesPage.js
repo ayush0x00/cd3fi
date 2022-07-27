@@ -5,7 +5,7 @@ import SoldNFBs from "./SoldNFBS";
 
 export default function SalesPage() {
   const [show, setshow] = useState(1);
-  const activeClass = "text-blue-900 bg-teal-300 ";
+  const activeClass = "text-blue-900 bg-cyan-200 ";
   const inActiveClass = "text-white bg-[#0a031a]";
 
   return (
