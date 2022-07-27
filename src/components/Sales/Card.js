@@ -8,7 +8,7 @@ export default function Card(props) {
       <div className="bg-[#1d1236]  px-5 rounded-lg mb-10 ">
         <img src={props.img} className="pt-6 pb-2" />
         <div className="flex justify-between items-center">
-          <p className="text-teal-200 text-xl font-bold lg:text-base sm:text-sm">
+          <p className="text-cyan-200 text-xl font-bold lg:text-base sm:text-sm">
             {props.price}
           </p>
           <p className="font-bold text-sm lg:text-xs">{`Bond ${props.bond}`}</p>
