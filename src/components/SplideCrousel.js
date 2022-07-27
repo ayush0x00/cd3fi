@@ -24,14 +24,11 @@ export default function SplideCrousel() {
   }, [items.length]);
   return (
     <>
-
       <div className="text-white -z-10 xl:hidden">
         <Splide aria-label="My Favorite Images" options={{ perPage: "4" }}>
           {items
             .map((e, i) => {
-            return (
-
-              <SplideTrack>
+              return (
                 <SplideSlide id={i}>
                   <Card
                     img={e.image == "Dark" ? Dark : Light}
@@ -41,7 +38,6 @@ export default function SplideCrousel() {
                     button="BUY"
                   />
                 </SplideSlide>
-              </SplideTrack>
               );
             })
             .slice(0, 5)}
