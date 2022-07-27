@@ -1,5 +1,6 @@
 import React from "react";
 import richImg from "../static/images/richImg.png";
+import ModalImage from "./Sales/ModalImage";
 
 const RichColumn = () => {
   const handleClick = () => {};
@@ -31,14 +32,15 @@ const RichColumn = () => {
               covered by the collection Sponsor; any surplus is distributed to
               NFB owners.{" "}
             </p>{" "}
-            <a
+            {/* <a
               target="_blank"
               className="main_img"
               onClick={handleClick} //"guru1('grur_',1  )"
               id="grur_1"
             >
               GUARANTEED.
-            </a>
+            </a> */}
+            <ModalImage />
           </div>
         </div>
       </div>
