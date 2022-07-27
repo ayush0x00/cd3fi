@@ -4,7 +4,7 @@ import de2 from "../static/images/de2.png";
 import de3 from "../static/images/de3.png";
 import de4 from "../static/images/de4.png";
 import de5 from "../static/images/de5.png";
-import de6 from "../static/images/de5.png";
+import de6 from "../static/images/de6.png";
 import de7 from "../static/images/de7.png";
 import de8 from "../static/images/de8.png";
 
