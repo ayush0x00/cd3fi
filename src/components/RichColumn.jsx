@@ -1,6 +1,6 @@
 import React from "react";
 import richImg from "../static/images/richImg.png";
-import ModalImage from "./Sales/ModalImage";
+
 
 const RichColumn = () => {
   const handleClick = () => {};
