@@ -53,7 +53,7 @@ export default function SoldNFBs() {
         className="text-white flex justify-end space-x-2 items-center sm:space-x-[3px] "
         previousLinkClassName="bg-teal-200 text-blue-900 py-1 px-2 rounded-lg sm:text-sm font-bold hover:bg-teal-300"
         nextLinkClassName="bg-teal-200 text-blue-900 px-2 py-1 rounded-lg sm:text-sm font-bold hover:bg-teal-300"
-        pageLinkClassName="bg-white text-blue-500 px-2 py-1 rounded sm:px-1 sm:text-sm sm:hidden hover:bg-gray-600 hover:text-black"
+        pageLinkClassName="bg-black text-blue-500 px-2 py-1 rounded sm:px-1 sm:text-sm sm:hidden hover:bg-gray-600 hover:text-white"
         renderOnZeroPageCount={null}
       />
       <div className="text-white grid grid-cols-4 lg:grid-cols-2 justify-center xl:grid-cols-3 sm:grid-cols-1">
