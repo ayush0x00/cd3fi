@@ -50,8 +50,8 @@ export default function AvailableNFBS() {
           pageRangeDisplayed={5}
           onPageChange={handlePageClick}
           className="text-white flex justify-end space-x-2 items-center sm:space-x-[3px] "
-          previousLinkClassName="bg-teal-200 text-blue-900 py-1 px-2 rounded-lg sm:text-sm font-bold hover:bg-teal-300"
-          nextLinkClassName="bg-teal-200 text-blue-900 px-2 py-1 rounded-lg sm:text-sm font-bold hover:bg-teal-300"
+          previousLinkClassName="bg-cyan-200 text-blue-900 py-1 px-2 rounded-lg sm:text-sm font-bold hover:bg-teal-300"
+          nextLinkClassName="bg-cyan-200 text-blue-900 px-2 py-1 rounded-lg sm:text-sm font-bold hover:bg-teal-300"
           pageLinkClassName="bg-white text-blue-500 px-2 py-1 rounded sm:px-1 sm:text-sm sm:hidden hover:bg-gray-600 hover:text-black"
           renderOnZeroPageCount={null}
         />
