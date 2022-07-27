@@ -1,8 +1,6 @@
 import React from "react";
 
 import Card from "../components/Sales/Card";
-import Dark from "../Media/Cartificate-Dark.png";
-import Light from "../Media/NFB Certificate (3)@2x.png";
 import { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
 
@@ -62,7 +60,7 @@ export default function AvailableNFBS() {
             return (
               <div key={i}>
                 <Card
-                  img={e.image == "Dark" ? Dark : Light}
+                  img={e.image}
                   price={e.price}
                   bond={e.bondId}
                   time={formatTime(e.timestamp)}

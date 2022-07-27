@@ -1,7 +1,5 @@
 import React from "react";
 import Card from "../components/Sales/Card";
-import Dark from "../Media/Cartificate-Dark.png";
-import Light from "../Media/NFB Certificate (3)@2x.png";
 import { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
 
@@ -51,8 +49,8 @@ export default function SoldNFBs() {
         pageRangeDisplayed={5}
         onPageChange={handlePageClick}
         className="text-white flex justify-end space-x-2 items-center sm:space-x-[3px] "
-        previousLinkClassName="bg-teal-200 text-blue-900 py-1 px-2 rounded-lg sm:text-sm font-bold hover:bg-teal-300"
-        nextLinkClassName="bg-teal-200 text-blue-900 px-2 py-1 rounded-lg sm:text-sm font-bold hover:bg-teal-300"
+        previousLinkClassName="bg-cyan-200 text-blue-900 py-1 px-2 rounded-lg sm:text-sm font-bold hover:bg-teal-300"
+        nextLinkClassName="bg-cyan-200 text-blue-900 px-2 py-1 rounded-lg sm:text-sm font-bold hover:bg-teal-300"
         pageLinkClassName="bg-black text-blue-500 px-2 py-1 rounded sm:px-1 sm:text-sm sm:hidden hover:bg-gray-600 hover:text-white"
         renderOnZeroPageCount={null}
       />
@@ -64,7 +62,7 @@ export default function SoldNFBs() {
           return (
             <div key={i}>
               <Card
-                img={e.image == "Dark" ? Dark : Light}
+                img={e.image}
                 price={e.price}
                 bond={e.bondId}
                 time={formatTime(e.timestamp)}

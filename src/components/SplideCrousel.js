@@ -1,10 +1,7 @@
 import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css/sea-green";
+import "@splidejs/react-splide/css/skyblue";
 import Card from "./Sales/Card";
-import certificate from "../Media/Cartificate-Dark.png";
-import Dark from "../Media/Cartificate-Dark.png";
-import Light from "../Media/NFB Certificate (3)@2x.png";
 import { useState, useEffect } from "react";
 
 export default function SplideCrousel() {
@@ -31,7 +28,7 @@ export default function SplideCrousel() {
               return (
                 <SplideSlide id={i}>
                   <Card
-                    img={e.image == "Dark" ? Dark : Light}
+                    img={e.image}
                     price={e.price}
                     bond={e.bondId}
                     time={e.timestamp}

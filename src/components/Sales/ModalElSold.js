@@ -54,10 +54,10 @@ export default function ModalElSold(props) {
                 <p>$0.00</p>
               </div>
               <div className="flex justify-between pb-8">
-                <p className="font-bold">Routes</p>
+                <p className="font-bold">Rates</p>
                 <div className="flex flex-col">
                   <p className="text-sm">1 BUSD = 6446377363 CD3Fi</p>
-                  <p className="text-sm">1 CD#Fi = 0.00003537 BUSD</p>
+                  <p className="text-sm">1 CD3Fi = 0.00003537 BUSD</p>
                 </div>
               </div>
               <p className="font-bold">Days to sell</p>
@@ -70,11 +70,11 @@ export default function ModalElSold(props) {
 
           <ModalFooter>
             <div className="flex justify-between w-full">
-              <Button width="100px" rounded="10px" fontWeight="semibold" bg="lightblue">
+              <Button width="120px" rounded="10px" fontWeight="semibold" bg="#99EFFF" height="50px">
                 {" "}
                 Submit{" "}
               </Button>
-              <Button variant="ghost" onClick={onClose} width="100px" rounded="10px" fontWeight="semibold" bg="lightblue">
+              <Button variant="ghost" onClick={onClose} height="50px" width="100px" rounded="10px" fontWeight="semibold" bg="#99EFFF">
                 Cancel
               </Button>
             </div>

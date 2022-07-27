@@ -42,7 +42,7 @@ export default function SalesPage() {
         </div>
       </div>
       <footer className="mt-auto">
-        <p className="py-2 text-center bg-teal-200 font-semibold text-blue-900">
+        <p className="py-2 text-center bg-cyan-200 font-semibold text-blue-900">
           © CinemaDraft, LLC. All rights reserved.
         </p>
       </footer>
