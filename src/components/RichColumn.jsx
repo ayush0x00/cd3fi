@@ -1,5 +1,6 @@
 import React from "react";
 import richImg from "../static/images/richImg.png";
+import ModalImage from "./modalCash";
 
 const RichColumn = () => {
   const handleClick = () => {};
@@ -39,6 +40,7 @@ const RichColumn = () => {
             >
               GUARANTEED.
             </a>*/}
+            <ModalImage />
           </div>
         </div>
       </div>
