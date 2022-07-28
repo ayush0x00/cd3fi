@@ -48,7 +48,7 @@ export default function ModalEl(props) {
             {/* CAN ADD DATA THROUGH PROPS HERE FOR BAND PRICE AND TIME  */}
             <div className="flex justify-between">
               <div className="flex flex-col">
-                <p className="font-semibold">Band</p>
+                <p className="font-semibold">Bond</p>
                 <p className="font-semibold">Price</p>
                 <p className="font-semibold">Time</p>
               </div>
