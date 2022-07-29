@@ -1,6 +1,7 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { useState, useRef, useEffect } from 'react'
+import InputComp from "./InputComp";
 
 
 
@@ -100,59 +101,9 @@ const CounterArea = () => {
                 <h3>$5,468.27</h3>
               </div>
             </div>
-            <div className="quote">
-              <div className="quoteText">
-                <h4>
-                  {" "}
-                  "They say money can’t buy happiness but it sure as hell buys
-                  everything else."{" "}
-                </h4>
-                <p>- MAD MONEY</p>
-              </div>
-            </div>
-            <div className="updatesField">
-              {/* <form
-                action="https://cinemadraft.us14.list-manage.com/subscribe/post?u=fcd503faf1285a57eea370664&amp;id=e3718094a2"
-                method="post"
-                id="mc-embedded-subscribe-form"
-                name="mc-embedded-subscribe-form"
-                className="validate"
-                target="_blank"
-                novalidate
-              >
-                <div className="form-group">
-                  {" "}
-                  <input
-                    placeholder="Enter email for NFB updates from CinemaDraft"
-                    type="email"
-                    value=""
-                    name="EMAIL"
-                    className="required email form-control"
-                    id="mce-EMAIL"
-                    required
-                  />{" "}
-                  <input
-                    type="submit"
-                    value="Subscribe"
-                    name="Subscribe"
-                    id="mc-embedded-subscribe"
-                    className="button"
-                  />{" "}
-                </div>
-                <div id="mce-responses" className="clear">
-                  <div
-                    className="response"
-                    id="mce-error-response"
-                    style="color: #fff; display:none"
-                  ></div>
-                  <div
-                    className="response"
-                    id="mce-success-response"
-                    style="color: #fff; display:none"
-                  ></div>
-                </div>
-              </form> */}
-            </div>
+            <br></br>
+            
+            <InputComp />
           </div>
         </div>
       </div>
