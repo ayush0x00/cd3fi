@@ -25,10 +25,10 @@ export default function ModalImage() {
         <
         ModalOverlay bg = "rgba(0,0,0,0.7)" / >
         <
-        ModalContent w = '950px'
+        ModalContent w = '800px'
         mx = 'auto'
         my = 'auto' >
-
+        <ModalCloseButton ml="auto" color="white"/>
         <
         ModalBody >
         <
