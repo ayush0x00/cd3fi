@@ -95,25 +95,25 @@ export default function Navbar(props) {
             <MenuList bg="#1d172e" border="#29213b" rounded="5px">
               <p className="font-semibold text-white py-1 w-[160px] hover:border-b-2 hover:border-cyan-400 ">
                 {" "}
-                <MenuItem h="30px" pl="20px" pr="20px" _hover={{ textColor: "#99F6FF" }}>
+                <MenuItem as="a" href="https://twitter.com/NFBFinance" h="30px" pl="20px" pr="20px" _hover={{ textColor: "#99F6FF" }}>
                   TWITTER
                 </MenuItem>
               </p>
               <p className="font-semibold text-white py-1 w-[160px] hover:border-b-2 hover:border-cyan-400 ">
                 {" "}
-                <MenuItem h="30px" pl="20px" _hover={{ textColor: "#99F6FF" }}>
+                <MenuItem as="a" href="https://instagram.com/CD3FiToken" h="30px" pl="20px" _hover={{ textColor: "#99F6FF" }}>
                   INSTAGRAM
                 </MenuItem>
               </p>
               <p className="font-semibold text-white py-1 w-[160px] hover:border-b-2 hover:border-cyan-400 ">
                 {" "}
-                <MenuItem h="30px" pl="20px" _hover={{ textColor: "#99F6FF" }}>
+                <MenuItem as="a" href="https://youtube.com/c/cinemadraft" h="30px" pl="20px" _hover={{ textColor: "#99F6FF" }}>
                   YOUTUBE
                 </MenuItem>
               </p>
               <p className="font-semibold text-white py-1 w-[160px] hover:border-b-2 hover:border-cyan-400 ">
                 {" "}
-                <MenuItem h="30px" pl="20px" _hover={{ textColor: "#99F6FF" }}>
+                <MenuItem as="a" href="https://cinemadraft.medium.com" h="30px" pl="20px" _hover={{ textColor: "#99F6FF" }}>
                   MEDIUM
                 </MenuItem>
               </p>
@@ -140,6 +140,7 @@ export default function Navbar(props) {
                 pl="20px"
                 pr="20px"
                 bg="#1d172e"
+                as="a" href="https://bit.ly/3wPLH7Y"
               >
                 <div className="flex flex-col  text-white hover:text-[#99F6FF] w-[220px]  pt-1 hover:border-b-2 hover:border-cyan-400 rounded">
                   <p className="font-bold hover:text-[#99F6FF] w-full">
@@ -155,6 +156,7 @@ export default function Navbar(props) {
                 _hover={{ textColor: "#99F6FF" }}
                 pl="20px"
                 bg="#1d172e"
+                as="a" href="https://www.cinemadraft.co/team/"
               >
                 <div className="flex flex-col  text-white hover:text-[#99F6FF] w-[220px] pt-1 hover:border-b-2 hover:border-cyan-400 rounded">
                   <p className="font-bold hover:text-[#99F6FF]">TEAM</p>
@@ -170,7 +172,7 @@ export default function Navbar(props) {
               >
                 <div className="flex flex-col  text-white hover:text-[#99F6FF] w-[220px] pt-1 hover:border-b-2 hover:border-cyan-400 rounded">
                   <p className="font-bold hover:text-[#99F6FF]">CONTRACT</p>
-                  <p className="text-sm">Code is low</p>
+                  <p className="text-sm">Code is law</p>
                 </div>
               </MenuItem>
               <MenuItem
@@ -189,6 +191,7 @@ export default function Navbar(props) {
                 _hover={{ textColor: "#99F6FF" }}
                 pl="20px"
                 bg="#1d172e"
+                as="a" href="https://bit.ly/3QfViMR"
               >
                 <div className="flex flex-col  text-white hover:text-[#99F6FF] w-[220px] pt-1 hover:border-b-2 hover:border-cyan-400 rounded">
                   <p className="font-bold hover:text-[#99F6FF]">FAQ</p>
@@ -199,6 +202,7 @@ export default function Navbar(props) {
                 _hover={{ textColor: "#99F6FF" }}
                 pl="20px"
                 bg="#1d172e"
+                as="a" href="mailto:sponsorship@nfb.finance"
               >
                 <div className="flex flex-col  text-white hover:text-[#99F6FF] w-[220px] pt-1 hover:border-b-2 hover:border-cyan-400 rounded">
                   <p className="font-bold hover:text-[#99F6FF]">SPONSORSHIP</p>
@@ -219,7 +223,7 @@ export default function Navbar(props) {
           </Link>
           <button
             className=" px-4 py-2 rounded-lg hover:bg-cyan-400 bg-cyan-200 text-black"
-            onClick={props.connectMetamask}
+            onClick={props.connectMetamask} 
           >
             {props.account ? props.account : "CONNECT"}
           </button>
