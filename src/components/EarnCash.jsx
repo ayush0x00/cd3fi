@@ -43,7 +43,7 @@ const EarnCash = () => {
             <figure>
               <img src={de3} alt="" />
             </figure>
-            <h4> Only 1000 CD3Fi needed tobuy or sell </h4>
+            <h4> Only 1000 CD3Fi needed to buy or sell </h4>
           </div>
           <div className="earnCashCard" data-aos="fade-up" data-aos-duration="">
             <figure>
