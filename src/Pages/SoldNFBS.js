@@ -66,7 +66,7 @@ export default function SoldNFBs() {
                 price={e.price}
                 bond={e.bondId}
                 time={formatTime(e.timestamp)}
-                button="SOLD"
+                button="RESELL"
               />
             </div>
           );
