@@ -48,7 +48,11 @@ export default function Navbar(props) {
             </a>
           </div>
           <div className="flex ]">
+            <a  href="https://cd3d.app/trade"
+              target="_blank"
+              style={{ color: "#FFFFFF", "text-decoration": "none" }}>
             <p className="hover:text-cyan-200 cursor-pointer">EXCHANGE</p>
+            </a>
           </div>
           <Menu autoSelect={false}>
             <MenuButton>
@@ -70,7 +74,7 @@ export default function Navbar(props) {
 
             <MenuList bg="#1d172e" border="#29213b" rounded="5px">
               <p className="font-semibold text-white py-1 w-[100px]">
-                <MenuItem _hover={{ textColor: "#99F6FF" }} pl="20px">
+                <MenuItem as="a"href="https://bit.ly/3GtJ1jq" _hover={{ textColor: "#99F6FF" }} pl="20px">
                   Deck
                 </MenuItem>
               </p>
