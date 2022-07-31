@@ -4,7 +4,7 @@ export default function InputComp() {
     return ( <
         div className = 'flex justify-center flex-col items-center' >
         <
-        p className = 'text-white text-2xl' > 'They say money can’t buy happiness but it sure as hell bus everything else' < /p> <
+        p className = 'text-white text-2xl' > 'They say money can’t buy happiness but it sure as hell buys everything else' < /p> <
         p className = 'text-[#99efff] text-lg' > -MAD MONEY < /p> <
         div className = 'flex bg-[#1d1236] py-2 px-4 rounded-xl' >
         <
