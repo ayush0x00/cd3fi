@@ -47,6 +47,7 @@ export default function Navbar(props) {
               <p className="hover:text-cyan-200 cursor-pointer">CD3D</p>
             </a>
           </div>
+        
           <div className="flex ]">
             <a  href="https://cd3d.app/trade"
               target="_blank"
@@ -73,9 +74,14 @@ export default function Navbar(props) {
             </MenuButton>
 
             <MenuList bg="#1d172e" border="#29213b" rounded="5px">
-              <p className="font-semibold text-white py-1 w-[100px]">
-                <MenuItem as="a"href="https://bit.ly/3GtJ1jq" _hover={{ textColor: "#99F6FF" }} pl="20px">
+              <p className="font-semibold text-white py-1 w-[180px] hover:border-b-2 hover:border-cyan-400 rounded">
+                <MenuItem as="a"href="https://bit.ly/3GtJ1jq"_hover={{ textColor: "#99F6FF" }} pl="20px" h="30px" pr="20px">
                   Deck
+                </MenuItem>
+              </p>
+                <p className="font-semibold text-white py-1 w-[180px] hover:border-b-2 hover:border-cyan-400 rounded">
+                <MenuItem as="a"href="https://bit.ly/38oKZVP"_hover={{ textColor: "#99F6FF" }} pl="20px">
+                  Whitepaper
                 </MenuItem>
               </p>
             </MenuList>
@@ -97,25 +103,25 @@ export default function Navbar(props) {
             </MenuButton>
 
             <MenuList bg="#1d172e" border="#29213b" rounded="5px">
-              <p className="font-semibold text-white py-1 w-[160px] hover:border-b-2 hover:border-cyan-400 ">
+              <p className="font-semibold text-white py-1 w-[160px] hover:border-b-2 hover:border-cyan-400 rounded">
                 {" "}
                 <MenuItem as="a" href="https://twitter.com/NFBFinance" h="30px" pl="20px" pr="20px" _hover={{ textColor: "#99F6FF" }}>
                   TWITTER
                 </MenuItem>
               </p>
-              <p className="font-semibold text-white py-1 w-[160px] hover:border-b-2 hover:border-cyan-400 ">
+              <p className="font-semibold text-white py-1 w-[160px] hover:border-b-2 hover:border-cyan-400 rounded">
                 {" "}
                 <MenuItem as="a" href="https://instagram.com/CD3FiToken" h="30px" pl="20px" _hover={{ textColor: "#99F6FF" }}>
                   INSTAGRAM
                 </MenuItem>
               </p>
-              <p className="font-semibold text-white py-1 w-[160px] hover:border-b-2 hover:border-cyan-400 ">
+              <p className="font-semibold text-white py-1 w-[160px] hover:border-b-2 hover:border-cyan-400 rounded ">
                 {" "}
                 <MenuItem as="a" href="https://youtube.com/c/cinemadraft" h="30px" pl="20px" _hover={{ textColor: "#99F6FF" }}>
                   YOUTUBE
                 </MenuItem>
               </p>
-              <p className="font-semibold text-white py-1 w-[160px] hover:border-b-2 hover:border-cyan-400 ">
+              <p className="font-semibold text-white py-1 w-[160px] hover:border-b-2 hover:border-cyan-400 rounded">
                 {" "}
                 <MenuItem as="a" href="https://cinemadraft.medium.com" h="30px" pl="20px" _hover={{ textColor: "#99F6FF" }}>
                   MEDIUM
