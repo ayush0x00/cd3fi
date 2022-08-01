@@ -1,9 +1,10 @@
+import { propNames } from "@chakra-ui/react";
 import React from "react";
 import { useState } from "react";
 import AvailableNFBS from "./AvailableNFBS";
 import SoldNFBs from "./SoldNFBS";
 
-export default function SalesPage() {
+export default function SalesPage(props) {
   const [show, setshow] = useState(1);
   const activeClass = "text-blue-900 bg-cyan-200 ";
   const inActiveClass = "text-white bg-[#0a031a]";
@@ -37,7 +38,11 @@ export default function SalesPage() {
             </div>
           </div>
           <div className="mt-10 ">
-            {show == 1 ? <AvailableNFBS /> : <SoldNFBs />}
+            {show == 1 ? (
+              <AvailableNFBS contract={props.contract} />
+            ) : (
+              <SoldNFBs contract={props.contract} />
+            )}
           </div>
         </div>
       </div>
