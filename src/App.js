@@ -17,7 +17,7 @@ function App() {
   const [account, setAccount] = useState();
   const [signer, setSigner] = useState();
   const [contract, setContract] = useState();
-  const address = "0xCA9e94563432100f8644225D66440c67030E2499";
+  const address = "0xc2079be3e20D18179CcEFe89942897cc86a3c9A6";
   const bscProvider = "http://localhost:7545"; //"https://data-seed-prebsc-1-s1.binance.org:8545/";
 
   const connectMetamask = async () => {

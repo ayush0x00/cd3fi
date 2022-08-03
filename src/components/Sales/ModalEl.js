@@ -92,7 +92,7 @@ export default function ModalEl(props) {
                 variant="ghost"
                 onClick={approve}
                 height="50px"
-                width="120px"
+                width="150px"
                 rounded="10px"
                 fontWeight="semibold"
                 bg="#99EFFF"
@@ -102,7 +102,7 @@ export default function ModalEl(props) {
               <Button
                 bg="#99EFFF"
                 height="50px"
-                width="120px"
+                width="150px"
                 rounded="10px"
                 fontWeight="semibold"
                 onClick={handleBuy}

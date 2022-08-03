@@ -2,8 +2,9 @@ import React from "react";
 import Card from "../components/Sales/Card";
 import { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
+import { propNames } from "@chakra-ui/react";
 
-export default function SoldNFBs() {
+export default function SoldNFBs(props) {
   const itemsPerPage = 8;
   const [currentItems, setCurrentItems] = useState([]);
   const [pageCount, setPageCount] = useState(0);
@@ -66,6 +67,7 @@ export default function SoldNFBs() {
                 price={e.price}
                 bond={e.bondId}
                 time={formatTime(e.timestamp)}
+                contract={props.contract}
                 button="RESELL"
               />
             </div>

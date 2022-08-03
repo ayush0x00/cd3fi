@@ -25,7 +25,11 @@ export default function Card(props) {
               time={props.time}
             />
           ) : (
-            <ModalElSold name={props.button} contract={props.contract} />
+            <ModalElSold
+              name={props.button}
+              contract={props.contract}
+              bond={props.bond}
+            />
           )}
         </div>
       </div>
