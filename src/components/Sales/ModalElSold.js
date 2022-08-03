@@ -1,4 +1,5 @@
 import React from "react";
+import { ethers } from "ethers";
 import {
   Modal,
   ModalOverlay,
@@ -11,6 +12,16 @@ import {
 } from "@chakra-ui/react";
 
 export default function ModalElSold(props) {
+  const handleClick = async (e) => {
+    const id = props.bond;
+    const contract = props.contract;
+    console.log(contract);
+    const time = document.getElementById("days").value;
+    const price = document.getElementById("price").value;
+    const tx = await props.contract.createSale(id, price, time);
+    console.log(tx);
+  };
+
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
@@ -22,7 +33,7 @@ export default function ModalElSold(props) {
         fontSize="13px"
         color="#1e0347"
         height="24px"
-        width = "200px"
+        width="200px"
       >
         {props.name}
       </Button>
@@ -48,6 +59,7 @@ export default function ModalElSold(props) {
               <input
                 className=" mb-3 border-2 border-teal-600 rounded-lg px-3 flex py-2"
                 placeholder="Set Sale"
+                id="price"
               />
               <div className="flex justify-between pb-8">
                 <p className="font-bold">Last Sale Price : $2245.67</p>
@@ -64,17 +76,33 @@ export default function ModalElSold(props) {
               <input
                 className=" mb-3 border-2 border-teal-600 rounded-lg px-3 flex py-2"
                 placeholder="Enter number of days"
+                id="days"
               />
             </div>
           </ModalBody>
 
           <ModalFooter>
             <div className="flex justify-between w-full">
-              <Button width="120px" rounded="10px" fontWeight="semibold" bg="#99EFFF" height="50px">
+              <Button
+                width="120px"
+                rounded="10px"
+                fontWeight="semibold"
+                bg="#99EFFF"
+                height="50px"
+                onClick={handleClick}
+              >
                 {" "}
                 Submit{" "}
               </Button>
-              <Button variant="ghost" onClick={onClose} height="50px" width="100px" rounded="10px" fontWeight="semibold" bg="#99EFFF">
+              <Button
+                variant="ghost"
+                onClick={onClose}
+                height="50px"
+                width="100px"
+                rounded="10px"
+                fontWeight="semibold"
+                bg="#99EFFF"
+              >
                 Cancel
               </Button>
             </div>

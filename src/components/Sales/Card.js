@@ -17,9 +17,19 @@ export default function Card(props) {
           <p className="text-xs ">{props.time}</p>
 
           {props.button === "BUY" ? (
-            <ModalEl name={props.button} />
+            <ModalEl
+              name={props.button}
+              contract={props.contract}
+              bond={props.bond}
+              price={props.price}
+              time={props.time}
+            />
           ) : (
-            <ModalElSold name={props.button} />
+            <ModalElSold
+              name={props.button}
+              contract={props.contract}
+              bond={props.bond}
+            />
           )}
         </div>
       </div>

@@ -17,22 +17,16 @@ function App() {
   const [account, setAccount] = useState();
   const [signer, setSigner] = useState();
   const [contract, setContract] = useState();
-  const address = "0xE71347Bb70d548B4a0C92cE753dC7DBF132318dC";
-
-  useEffect(() => {
-    const provider = new ethers.providers.JsonRpcProvider(
-      "https://data-seed-prebsc-1-s1.binance.org:8545/"
-    );
-    const nfbContract = new ethers.Contract(address, abi, provider);
-    console.log(nfbContract);
-    setContract(nfbContract);
-  }, []);
+  const address = "0xc2079be3e20D18179CcEFe89942897cc86a3c9A6";
+  const bscProvider = "http://localhost:7545"; //"https://data-seed-prebsc-1-s1.binance.org:8545/";
 
   const connectMetamask = async () => {
     try {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const acc = await provider.send("eth_requestAccounts", []);
       const signer = provider.getSigner();
+      const nfbContract = new ethers.Contract(address, abi, signer);
+      setContract(nfbContract);
       setSigner(signer);
       setAccount(
         `${acc[0].substring(0, 3)}..${acc[0].substring(acc[0].length - 3)}`
@@ -48,7 +42,7 @@ function App() {
     <div className="App">
       <Navbar connectMetamask={connectMetamask} account={account} />
       <Routes>
-        <Route path="/buy" element={<SalesPage />} />
+        <Route path="/buy" element={<SalesPage contract={contract} />} />
         <Route path="/" element={<MainPage />} />
       </Routes>
     </div>

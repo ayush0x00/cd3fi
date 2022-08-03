@@ -1,4 +1,6 @@
 import React from "react";
+import { ethers } from "ethers";
+import cd3fiAbi from "../../CD3FiAbi.json";
 import {
   Modal,
   ModalOverlay,
@@ -11,6 +13,29 @@ import {
 } from "@chakra-ui/react";
 
 export default function ModalEl(props) {
+  const approve = async () => {
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const acc = await provider.send("eth_requestAccounts", []);
+    const signer = provider.getSigner();
+    const cd3FiContract = new ethers.Contract(
+      "0xf93949B20C43c28651a4917FC52b4AC124F2d2a2",
+      cd3fiAbi,
+      signer
+    );
+    const price = await props.contract.nfbPriceInCd3Fi(props.bond);
+    const tx = await cd3FiContract.approve(props.contract.address, price);
+    console.log(tx);
+  };
+
+  const handleBuy = async () => {
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const acc = await provider.send("eth_requestAccounts", []);
+    const contract = props.contract;
+    const from = await contract.ownerOf(props.bond);
+    const tx = await contract.buyNFB(from, acc[0], props.bond);
+    console.log(tx);
+  };
+
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <div className="">
@@ -54,20 +79,35 @@ export default function ModalEl(props) {
               </div>
               <div className="flex flex-col items-end">
                 {/* CAN ADD DATA THROUGH PROPS FOR ALL THE PARAGRAPH ELEMENT HERE */}
-                <p>#122</p>
-                <p>$2345.66</p>
-                <p>12:31 PM GMT, 5:26:22</p>
+                <p>#{props.bond}</p>
+                <p>${props.price}</p>
+                <p>{props.time}</p>
               </div>
             </div>
           </ModalBody>
 
           <ModalFooter>
             <div className="flex justify-between w-full pt-6 pb-3">
-              <Button bg="#99EFFF" height="50px" width="120px" rounded="10px" fontWeight="semibold">
-                Buy
+              <Button
+                variant="ghost"
+                onClick={approve}
+                height="50px"
+                width="150px"
+                rounded="10px"
+                fontWeight="semibold"
+                bg="#99EFFF"
+              >
+                Approve Cd3Fi
               </Button>
-              <Button variant="ghost" onClick={onClose} height="50px" width="120px" rounded="10px" fontWeight="semibold" bg="#99EFFF">
-                Cancel
+              <Button
+                bg="#99EFFF"
+                height="50px"
+                width="150px"
+                rounded="10px"
+                fontWeight="semibold"
+                onClick={handleBuy}
+              >
+                Buy
               </Button>
             </div>
           </ModalFooter>
