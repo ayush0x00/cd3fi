@@ -88,7 +88,8 @@ export default function ModalEl(props) {
 
           <ModalFooter>
             <div className="flex justify-between w-full pt-6 pb-3">
-              <Button
+              <ModalBuy />
+              {/* <Button
                 variant="ghost"
                 onClick={approve}
                 height="50px"
@@ -98,7 +99,7 @@ export default function ModalEl(props) {
                 bg="#99EFFF"
               >
                 Approve Cd3Fi
-              </Button>
+              </Button>*/}
               <Button
                 bg="#99EFFF"
                 height="50px"
