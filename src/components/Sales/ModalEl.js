@@ -11,6 +11,7 @@ import {
   useDisclosure,
   Button,
 } from "@chakra-ui/react";
+import ModalBuy from "./ModalBuy";
 
 export default function ModalEl(props) {
   const approve = async () => {
