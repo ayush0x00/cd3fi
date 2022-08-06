@@ -73,7 +73,7 @@ export default function ModalElSold(props) {
                 </div>
               </div>
               <p className="font-bold">Days to sell</p>
-              <input
+              <input type="date"
                 className=" mb-3 border-2 border-teal-600 rounded-lg px-3 flex py-2"
                 placeholder="Enter number of days"
                 id="days"
