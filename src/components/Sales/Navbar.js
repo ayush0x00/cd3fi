@@ -75,12 +75,12 @@ export default function Navbar(props) {
 
             <MenuList bg="#1d172e" border="#29213b" rounded="5px">
               <p className="font-semibold text-white py-1 w-[180px] hover:border-b-2 hover:border-cyan-400 rounded">
-                <MenuItem as="a"href="https://bit.ly/3GtJ1jq"_hover={{ textColor: "#99F6FF" }} pl="20px" h="30px" pr="20px">
+                <MenuItem as="a"href="https://bit.ly/3GtJ1jq"_hover={{ textColor: "#99F6FF" }} pl="20px" h="30px" pr="20px" target='_blank'>
                   Deck
                 </MenuItem>
               </p>
                 <p className="font-semibold text-white py-1 w-[180px] hover:border-b-2 hover:border-cyan-400 rounded">
-                <MenuItem as="a"href="https://bit.ly/38oKZVP"_hover={{ textColor: "#99F6FF" }} pl="20px">
+                <MenuItem as="a"href="https://bit.ly/38oKZVP"_hover={{ textColor: "#99F6FF" }} pl="20px" target='_blank'>
                   Whitepaper
                 </MenuItem>
               </p>
