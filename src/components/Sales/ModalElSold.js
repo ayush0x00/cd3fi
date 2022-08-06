@@ -16,7 +16,8 @@ export default function ModalElSold(props) {
     const id = props.bond;
     const contract = props.contract;
     console.log(contract);
-    const time = document.getElementById("days").value;
+    const time =
+      new Date(document.getElementById("days").value).getTime() / 1000;
     const price = document.getElementById("price").value;
     const tx = await props.contract.createSale(id, price, time);
     console.log(tx);
@@ -73,7 +74,8 @@ export default function ModalElSold(props) {
                 </div>
               </div>
               <p className="font-bold">Days to sell</p>
-              <input type="date"
+              <input
+                type="date"
                 className=" mb-3 border-2 border-teal-600 rounded-lg px-3 flex py-2"
                 placeholder="Enter number of days"
                 id="days"
