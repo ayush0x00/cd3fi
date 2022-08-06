@@ -1,7 +1,7 @@
 import React from "react";
 import ModalEl from "./ModalEl";
 import ModalElSold from "./ModalElSold";
-
+import ModalImg from "./ModalImg";
 export default function Card(props) {
   return (
     <div className="w-[300px] 3xl:w-[330px] 2xl:w-[270px] lg:w-[260px] sm:w-[260px] mx-auto">
