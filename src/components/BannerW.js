@@ -9,7 +9,7 @@ export default function BannerW() {
         <p className="text-white text-5xl font-semibold">
           The <span className="italic text-cyan-200">Future</span> of finance
         </p>
-        <p className="text-white text-5xl font-semibold">is Non-Fungible</p>
+        <p className="text-white text-5xl font-semibold">is Non-Fungible.</p>
         <p className="text-white">
           The official digital financial product for CD3Fi & CinemaDraft
         </p>
