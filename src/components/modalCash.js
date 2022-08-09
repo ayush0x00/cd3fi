@@ -17,7 +17,7 @@ export default function ModalImage() {
     return ( <
         >
         <
-        Button onClick = { onOpen } > Guaranteed < /Button>
+        Button onClick = { onOpen } > Guaranteed. < /Button>
 
         <
         Modal isOpen = { isOpen }
@@ -28,7 +28,9 @@ export default function ModalImage() {
         ModalContent w = '800px'
         mx = 'auto'
         my = 'auto' >
-        <ModalCloseButton ml="auto" color="white"/>
+        <
+        ModalCloseButton ml = "auto"
+        color = "white" / >
         <
         ModalBody >
         <
