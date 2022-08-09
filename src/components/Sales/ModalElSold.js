@@ -88,7 +88,7 @@ export default function ModalElSold(props) {
               <Button
                 width="200px"
                 rounded="10px"
-                fontWeight="semibold"
+                fontWeight="bold"
                 bg="#99EFFF"
                 height="50px"
                 onClick={handleClick}
@@ -102,7 +102,7 @@ export default function ModalElSold(props) {
                 height="50px"
                 width="200px"
                 rounded="10px"
-                fontWeight="semibold"
+                fontWeight="bold"
                 bg="#99EFFF"
               >
                 Cancel
