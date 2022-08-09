@@ -216,7 +216,8 @@ export default function Navbar(props) {
         /MenuButton> <
         MenuList bg = "#99F6FF"
         border = "#29213b"
-        rounded = "5px" >
+        rounded = "5px"
+        zIndex = "9999" >
         <
         MenuItem _hover = {
             { textColor: "#99F6FF" } }
