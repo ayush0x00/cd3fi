@@ -98,7 +98,7 @@ export default function ModalEl(props) {
                 fontWeight="semibold"
                 bg="#99EFFF"
               >
-                Approve Cd3Fi
+                Approve CD3Fi
               </Button>
               <ModalBuy />
             </div>
