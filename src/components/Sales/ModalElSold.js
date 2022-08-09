@@ -86,7 +86,7 @@ export default function ModalElSold(props) {
           <ModalFooter>
             <div className="flex justify-between w-full">
               <Button
-                width="120px"
+                width="200px"
                 rounded="10px"
                 fontWeight="semibold"
                 bg="#99EFFF"
@@ -100,7 +100,7 @@ export default function ModalElSold(props) {
                 variant="ghost"
                 onClick={onClose}
                 height="50px"
-                width="100px"
+                width="200px"
                 rounded="10px"
                 fontWeight="semibold"
                 bg="#99EFFF"
