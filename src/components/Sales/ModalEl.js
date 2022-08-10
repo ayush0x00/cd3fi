@@ -19,21 +19,12 @@ export default function ModalEl(props) {
     const acc = await provider.send("eth_requestAccounts", []);
     const signer = provider.getSigner();
     const cd3FiContract = new ethers.Contract(
-      "0xf93949B20C43c28651a4917FC52b4AC124F2d2a2",
+      "0x87C484f8c3c564e158A469bA209D8a89D176D82F",
       cd3fiAbi,
       signer
     );
     const price = await props.contract.nfbPriceInCd3Fi(props.bond);
     const tx = await cd3FiContract.approve(props.contract.address, price);
-    console.log(tx);
-  };
-
-  const handleBuy = async () => {
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
-    const acc = await provider.send("eth_requestAccounts", []);
-    const contract = props.contract;
-    const from = await contract.ownerOf(props.bond);
-    const tx = await contract.buyNFB(from, acc[0], props.bond);
     console.log(tx);
   };
 
@@ -100,7 +91,7 @@ export default function ModalEl(props) {
               >
                 Approve CD3Fi
               </Button>
-              <ModalBuy />
+              <ModalBuy contract={props.contract} bond={props.bond} />
             </div>
           </ModalFooter>
         </ModalContent>
