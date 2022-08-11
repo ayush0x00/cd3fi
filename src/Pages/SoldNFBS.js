@@ -5,6 +5,7 @@ import ReactPaginate from "react-paginate";
 import { propNames } from "@chakra-ui/react";
 
 export default function SoldNFBs(props) {
+  const cd3fiBUSDPrice = 0.25;
   const itemsPerPage = 8;
   const [currentItems, setCurrentItems] = useState([]);
   const [pageCount, setPageCount] = useState(0);
@@ -64,7 +65,7 @@ export default function SoldNFBs(props) {
             <div key={i}>
               <Card
                 img={e.image}
-                price={e.price}
+                price={Number.parseFloat(e.price * cd3fiBUSDPrice).toFixed(2)}
                 bond={e.bondId}
                 time={formatTime(e.timestamp)}
                 contract={props.contract}

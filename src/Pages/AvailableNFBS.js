@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
 
 export default function AvailableNFBS(props) {
+  const cd3fiBUSDPrice = 0.25;
   const [items, setitems] = useState([]);
   const itemsPerPage = 8;
   const [currentItems, setCurrentItems] = useState([]);
@@ -61,7 +62,7 @@ export default function AvailableNFBS(props) {
               <div key={i}>
                 <Card
                   img={e.image}
-                  price={e.price}
+                  price={Number.parseFloat(e.price * cd3fiBUSDPrice).toFixed(2)}
                   bond={e.bondId}
                   time={formatTime(e.timestamp)}
                   button="BUY"

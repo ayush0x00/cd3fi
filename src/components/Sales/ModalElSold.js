@@ -11,29 +11,38 @@ import {
   Button,
 } from "@chakra-ui/react";
 
-const backendURL = "http://localhost:1234/resell";
+const backendURL = "http://localhost:1234";
 
 export default function ModalElSold(props) {
   const handleClick = async (e) => {
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
-    const signer = provider.getSigner();
-    const sig = await signer.signMessage("HelloWorld");
-    const id = props.bond;
-    const contract = props.contract;
-    const time =
-      new Date(document.getElementById("days").value).getTime() / 1000;
-    const price = document.getElementById("price").value;
-    const tx = await contract.createSale(id, price, time);
-    console.log(tx);
-    const res = await fetch(`${backendURL}/${props.bond}`, {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ signature: sig }),
-    });
-    console.log(res);
+    try {
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const signer = provider.getSigner();
+      const sig = await signer.signMessage("HelloWorld");
+      const id = props.bond;
+      const contract = props.contract;
+      const time =
+        new Date(document.getElementById("days").value).getTime() / 1000;
+      const price = document.getElementById("price").value;
+      const tx = await contract.createSale(id, price, time);
+      console.log(tx);
+      try {
+        const res = await fetch(`${backendURL}/resell/${props.bond}`, {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ signature: sig }),
+        });
+        console.log(res);
+      } catch (e) {
+        console.log(e);
+      }
+    } catch (e) {
+      alert(e.data.message);
+      return;
+    }
   };
 
   const { isOpen, onOpen, onClose } = useDisclosure();

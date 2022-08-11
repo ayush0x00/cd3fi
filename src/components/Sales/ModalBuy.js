@@ -22,17 +22,28 @@ const backendURL = "http://localhost:1234";
 export default function ModalBuy(props) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [mod, setmod] = useState(true);
+  const { isMetamaskOpen, toggleOpen } = useState(false);
 
   const handleBuy = async () => {
-    onOpen();
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
-    const acc = await provider.send("eth_requestAccounts", []);
-    const contract = props.contract;
-    const from = await contract.ownerOf(props.bond);
-    const tx = await contract.buyNFB(from, acc[0], props.bond);
-    console.log(tx);
-    const res = await fetch(`${backendURL}/sell/${props.bond}`);
-    console.log(res);
+    // onOpen();
+    try {
+      toggleOpen(true);
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const acc = await provider.send("eth_requestAccounts", []);
+      const contract = props.contract;
+      const from = await contract.ownerOf(props.bond);
+      const tx = await contract.buyNFB(from, acc[0], props.bond);
+      console.log(tx);
+    } catch (e) {
+      alert(e.data.message);
+      return;
+    }
+    try {
+      const res = await fetch(`${backendURL}/sell/${props.bond}`);
+      console.log(res);
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   return (
@@ -63,45 +74,8 @@ export default function ModalBuy(props) {
         >
           <ModalCloseButton ml="auto" color="white" />
           <ModalBody>
-            <div className="absolute -top-48 left-[30%]">
-              <Alert
-                status="success"
-                variant="subtle"
-                flexDirection="column"
-                alignItems="center"
-                justifyContent="center"
-                textAlign="center"
-                height="200px"
-                bg="red"
-              >
-                <AlertIcon boxSize="40px" mr={0} />{" "}
-                <AlertTitle mt={4} mb={1} fontSize="lg">
-                  Application submitted!
-                </AlertTitle>{" "}
-                <AlertDescription maxWidth="sm">
-                  <div className="space-x-6">
-                    <button
-                      className="bg-white text-black w-20 rounded"
-                      onClick={() => {
-                        onClose();
-                      }}
-                    >
-                      {" "}
-                      No{" "}
-                    </button>{" "}
-                    <button
-                      className="bg-white text-black w-20 rounded"
-                      onClick={() => {
-                        setmod(false);
-                      }}
-                    >
-                      {" "}
-                      yes{" "}
-                    </button>{" "}
-                  </div>{" "}
-                </AlertDescription>
-              </Alert>
-            </div>{" "}
+            {/* <div className="absolute -top-48 left-[30%]">
+            </div>{" "} */}
             {mod && (
               <div className="flex flex-col items-center">
                 <img src={arrow} className="py-10" />
